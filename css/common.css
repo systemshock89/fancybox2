@@ -1,0 +1,456 @@
+/*version: 0.1.8*/
+/*---------STANDART STYLES------------*/
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: tahoma;
+    font-size: 12px;
+    color: #000;
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a, a:hover {
+    -webkit-transition: background 0.1s ease-in-out, border 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+    transition: background 0.1s ease-in-out, border 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+input,
+select{
+    padding: 5px 10px;
+}
+
+input[type='text'],
+input[type='file'],
+input[type='password'],
+select {
+    outline: 0;
+    border: 1px solid #d0d4d8;
+    -webkit-transition: border ease-in-out 0.2s, box-shadow ease-in-out 0.2s;
+    transition: border ease-in-out 0.2s, box-shadow ease-in-out 0.2s;
+}
+
+input[type='text']:focus,
+input[type='password']:focus,
+select:focus,
+textarea:focus {
+    border: 1px solid #869791;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+textarea {
+    padding: 5px 10px;
+    height: 70px;
+    border: 1px solid #d0d4d8;
+
+    outline: 0;
+    -webkit-transition: border ease-in-out 0.2s, box-shadow ease-in-out 0.2s;
+    transition: border ease-in-out 0.2s, box-shadow ease-in-out 0.2s;
+}
+
+label {
+    cursor: pointer;
+}
+
+td,
+th {
+    padding: 5px;
+}
+
+#overflow_div {
+    position: relative;
+    width: 100%;
+    min-width: 1000px;
+    min-height: 100%;
+    overflow: hidden;
+
+    background: #afd9bf;
+}
+
+.content-wraper {
+    position: relative;
+}
+
+.content-wraper.content-center > .content {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.content-wraper.content-center .content {
+    background: #c9f4da;
+}
+
+.content {
+    position: relative;
+    margin: 0 auto;
+    width: 960px;
+    padding: 0 20px;
+}
+
+.viewport {
+    position: relative;
+    overflow: hidden;
+}
+
+.overflower {
+    width: 105%;
+}
+
+.overflower.rightfloating {
+    margin-left: -5%;
+}
+
+.floatblock {
+    float: right;
+}
+
+.floatblock.left {
+    width: 210px;
+    margin-right: 20px;
+}
+
+.floatblock.center-min {
+    width: 500px;
+}
+
+.floatblock.center-middle {
+    width: 730px;
+}
+
+.floatblock.center-full {
+    width: 960px;
+}
+
+.floatblock.right {
+    width: 210px;
+    display: none;
+    margin-left: 20px;
+}
+
+.floatblock.padding-right {
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    height: 1px;
+}
+
+.left .block {
+    margin: 0 0 40px 0;
+}
+
+.right .block {
+    margin: 0 0 40px 0;
+}
+
+.center-min .block, .center-middle .block, .center-full .block {
+    margin-bottom: 30px;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h1, .h1 {
+    font-size: 2em;
+    margin: 0.67em;
+    font-weight: bold;
+}
+
+h2, .h2 {
+    font-size: 1.5em;
+    margin: 0.83em;
+    font-weight: bold;
+}
+
+h3, .h3 {
+    font-size: 1.17em;
+    margin: 1em;
+    font-weight: bold;
+}
+
+h4, .h4 {
+    margin: 1.33em;
+    font-weight: bold;
+}
+
+.left h2, .left .h2 {
+    margin: 0 0 15px 0;
+}
+
+.right h2, .right .h2 {
+    margin: 0 0 15px 0;
+}
+
+.center-min > h1, .center-middle > h1, .center-full > h1 {
+    margin: 0 0 15px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    background: #848484;
+    border-radius: 4px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.button:hover {
+    background: #606060;
+}
+
+.button:active {
+    background: #848484;
+}
+
+.placeholder {
+    color: #333;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #333;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #333;
+    opacity: 1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #333;
+    opacity: 1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #333;
+}
+
+/*---------/STANDART STYLES------------*/
+
+/*---------HEADER------------*/
+header.content-wraper {
+    height: 70px;
+    background: #658397;
+}
+
+header .content {
+    background: #a1d2e8;
+}
+
+header .logo {
+    float: left;
+}
+
+header .contacts {
+    float: right;
+}
+
+/*---------/HEADER------------*/
+
+
+/*---------CATALOG------------*/
+.catalog .catalog-bg {
+    /*background: #dedede;*/
+    /*padding: 1px 0;*/
+    /*padding для того чтобы скрыть выступающий снизу бэграунд марджином*/
+}
+
+.catalog .catalog-container {
+    text-align: justify;
+    margin-bottom: -43px;
+
+    /*скрываем марджинами бэграунд сверху (от паддинга в 1px) и снизу (от псевдоэлемента)*/
+    /*margin-top: -1px;*/
+}
+
+.catalog .catalog-container:after {
+    content: ' i i i i i i i i ';
+    word-spacing: 210px;
+    padding-left: 210px;
+    /*паддинг и word-spacing равны на несколько пикс меньще, чем ширина блока (или вообще равны)*/
+    visibility: hidden;
+}
+
+.catalog .item {
+    display: inline-block;
+    width: 210px;
+    vertical-align: top;
+    margin: 0 0 20px 0;
+    padding: 10px 0;
+    text-align: center;
+    border: 1px solid #c5c5c5;
+    border-radius: 10px;
+
+    /*эмуляция inline-block для IE6-7*/
+    /*display : inline;*/
+    /*zoom : 1;*/
+}
+
+.catalog .item .img-container {
+    position: relative;
+    display: block;
+    width: 180px;
+    height: 160px;
+    margin: 0 auto;
+}
+
+.catalog .item .img-container img {
+    max-width: 180px;
+    max-height: 160px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.catalog .item .name {
+    display: inline-block;
+    margin: 5px 0 0 0;
+}
+
+/*catalog.one*/
+.catalog.one .catalog-container {
+    text-align: center;
+}
+
+.catalog.one .catalog-container:after {
+    content: '';
+    word-spacing: normal;
+    padding-left: 0;
+}
+
+.catalog.one .item {
+    width: 210px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.catalog.one .item:hover .img-container img {
+    box-shadow: 0 2px 20px 0 #b3b6ba;
+}
+
+.catalog.one .item .img-container img,
+.catalog.one .item:hover .img-container img {
+    -webkit-transition: box-shadow 0.1s ease-in-out;
+    transition: box-shadow 0.1s ease-in-out;
+}
+
+.catalog.one .item .img-container {
+    width: 210px;
+    height: 139px;
+}
+
+.catalog.one .item .img-container img {
+    max-width: 190px;
+    max-height: 119px;
+    border: 10px solid #fff;
+}
+
+/*catalog.sections*/
+.catalog.sections .catalog-container:after {
+    word-spacing: 230px;
+    padding-left: 230px;
+}
+
+.catalog.sections .item {
+    width: 230px;
+}
+
+.catalog.sections .item:hover {
+    border: 1px solid #939393;
+    box-shadow: 0 2px 20px 0 #b3b6ba;
+}
+
+.catalog.sections .item .img-container {
+    width: 210px;
+    height: 119px;
+}
+
+.catalog.sections .item .img-container img {
+    max-width: 210px;
+    max-height: 119px;
+}
+
+/*catalog.gallery*/
+.catalog.gallery .catalog-container:after {
+    word-spacing: 228px;
+    padding-left: 228px;
+}
+
+.catalog.gallery .item {
+    width: 230px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.catalog.gallery .item:hover .img-container img {
+    box-shadow: 0 2px 20px 0 #b3b6ba;
+}
+
+.catalog.gallery .item .img-container {
+    width: 230px;
+    height: 139px;
+}
+
+.catalog.gallery .item .img-container img {
+    max-width: 210px;
+    max-height: 119px;
+    border: 10px solid #fff;
+    box-shadow: 0 2px 10px 0 #b3b6ba;
+}
+
+.catalog.gallery .item .img-container img,
+.catalog.gallery .item:hover .img-container img {
+    -webkit-transition: box-shadow 0.1s ease-in-out;
+    transition: box-shadow 0.1s ease-in-out;
+}
+
+/*---------/CATALOG------------*/
+
+
+/*---------OTHER STYLES------------*/
+
+.fancybox-title {
+    text-align: center;
+}
+
+/*показать лупу, если фэнсибокс увеличивает картинку*/
+a.fancybox-thumb.img-container[href$=".jpg"]:hover:before,
+a.fancybox-thumb.img-container[href$=".png"]:hover:before,
+a.fancybox-thumb[href$=".jpg"]:hover .img-container:before,
+a.fancybox-thumb[href$=".png"]:hover .img-container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 42px;
+    height: 42px;
+    background: url('../img/zoom.png') center no-repeat;
+    z-index: 1;
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+}
+/*---------/OTHER STYLES------------*/
